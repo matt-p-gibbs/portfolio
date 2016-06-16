@@ -8,16 +8,5 @@
  */
 
 return array(
-	'*' => array(
-		'devMode' => true,
-		'environmentVariables' => array(
-			'assetsBaseUrl' => '/assets',
-			'assetsBasePath' => './assets',
-		)
-	),
 
-	// Give CodeKit a custom site URL
-	'.local' => array(
-		'siteUrl' => "http://{$_SERVER['SERVER_NAME']}/",
-	)
 );
