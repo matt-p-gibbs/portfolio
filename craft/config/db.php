@@ -16,10 +16,10 @@ return array(
 	'database' => 'cl50-matt-cis',
 
 	// The database username to connect with.
-	'user' => 'root',
+	'user' => 'matt',
 
 	// The database password to connect with.
-	'password' => 'root',
+	'password' => 'V1s10n31',
 
 	// The prefix to use when naming tables. This can be no more than 5 characters.
 	'tablePrefix' => 'craft',
