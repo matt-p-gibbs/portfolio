@@ -8,5 +8,33 @@
  */
 
 return array(
+  '*' => array(
+    'omitScriptNameInUrls' => true//,
+    //'defaultImageQuality' => 100//,
+    //'cacheDuration' => 'P1W'
+  ),
 
+  'localhost' => array(
+    'environmentVariables' => array(
+      'basePath' => '/Users/Matt/Developer/web/portfolio/',
+      'baseUrl'  => 'http://inktraps-imac.local:5757/',
+      'devMode' => true,
+      'testToEmailAddress'  => 'me@matt-gibbs.com'
+    )
+  ),
+
+  'www.matt-gibbs.com' => array(
+    'environmentVariables' => array(
+      'basePath' => '/public_html/',
+      'baseUrl'  => 'http://www.matt-gibbs.com/',
+      'cacheDuration' => 'P1W'
+    )
+  ),
+
+  'dev.matt-gibbs.com' => array(
+    'environmentVariables' => array(
+      'basePath' => '/public_html/in-development-site/',
+      'baseUrl'  => 'http://dev.matt-gibbs.com'
+    )
+  )
 );
