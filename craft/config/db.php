@@ -13,7 +13,7 @@ return array(
 	'server' => 'localhost',
 
 	// The name of the database to select.
-	'database' => 'mattportfolio',
+	'database' => 'cl50-matt-cis',
 
 	// The database username to connect with.
 	'user' => 'root',
