@@ -1,0 +1,169 @@
+// Index
+// --------------------------------------------------
+
+.top__headline {
+  @include transition(all 0.3s);
+  padding-right: 15%;
+  margin: 0 0 1em 0;
+  padding-left:0;
+
+  @include media-mid($small, $xsmall) {
+    
+    padding-right:25%;
+
+  };
+
+  @include media($small) {
+    font-size:1.2em;
+  }
+
+  @include media($medium) {
+    padding-right:20%;
+    font-size:1.1em;
+  }
+
+  @include media ($large){
+    margin: .5em 0 1em;
+    font-size:1.3em;
+  }
+}
+
+.white {
+	color: #fff;
+}
+
+.projects{
+  @include media($small) {
+    @include flex-direction(row);
+  } 
+}
+
+.project {
+  @include transition(all 0.3s);
+	height:9em;
+	padding:1em 1em 1em 0em;
+	line-height:0.4em;
+	box-shadow: 70px 0px 120px -50px #000 inset;
+	margin:0;
+  cursor:pointer;
+	max-width: 100%;
+
+  @include media(375px){
+    height:13em;
+    font-size: $base-font-size;
+  }
+
+  @include media(425px){
+    height:15em;
+  }
+
+	@include media($small) {
+    @include flex-basis(100%);
+    max-width: 100%;
+    height:18em;
+    box-shadow: none;
+    text-shadow: none;
+  }
+
+  @include media(620px){
+    height:24em;
+  }
+
+  @include media($medium){
+    @include flex-basis(50%);
+    max-width: 50%;
+    height:15em;
+  }
+
+  @include media($large) {
+    height:12em;
+    @include flex-basis(33.3333%);
+    max-width: 33.3333%;
+  }
+
+  @include media($xlarge) {
+    height:15em;
+    @include flex-basis(33.3333%);
+    max-width: 33.3333%;
+  }
+	
+}
+
+.project:nth-child(1) {
+	background: #DF006A url(../images/project1.png);
+	background-position: right bottom;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.project:nth-child(2) {
+	background: #00C3F2 url(../images/project2.png);
+	background-position: right bottom;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.project:nth-child(3) {
+	background: #D4D4D4 url(../images/project3.png);
+	background-position: right bottom;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.project:nth-child(4) {
+	background: #00B3FF url(../images/project5.png);
+	background-position: right bottom;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.project:nth-child(5) {
+	background: #C2FCB4 url(../images/project4.png);
+	background-position: right bottom;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.project:nth-child(6) {
+	background: #000 url(../images/project6.png);
+	background-position: right bottom;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.project__description{
+  @include transition(all 0.3s);
+  width:12em;
+  color:#fff;
+  padding:.5em 0 .5em 2em;
+  margin-left:0;
+  font-size: $base-font-size*0.9;
+
+  @include media($small){
+    font-size:$base-font-size;
+  }
+
+
+  @include media($medium){
+    font-size: $base-font-size;
+    background: rgba(255,255,255,1);
+    color:#000;
+    opacity:0;
+    overflow: hidden;
+
+    .desc--visible & {
+      opacity:1;
+      width:12em;
+      padding:.5em 0 .5em 2em;
+    }
+  }
+}
+
+.project__line{
+  stroke:rgb(255,255,255);
+  stroke-width:2;
+  
+  @include media($medium){
+    stroke:rgb(0,0,0);
+  }
+}
