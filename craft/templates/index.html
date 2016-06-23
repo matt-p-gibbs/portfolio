@@ -1,33 +1,190 @@
-{#
- # Homepage template
- # ---------------
- #
- # When this template gets loaded, it will be because someone has accessed
- # http://yoursite.com/ (without any URI). Craft checks to see if you have
- # a Single section set to be the Homepage (as you do, by default), and
- # loads the section’s Template (this file). A special ‘entry’ variable
- # will already be set for you, assigned to the Homepage entry.
- #
- # It's worth noting that even if you didn't have a Homepage Single section,
- # as long as this template remains at craft/templates/index.html, it
- # would still be the one to get loaded when accessing http://yoursite.com/,
- # albeit without an ‘entry’ variable already set for you.
- #
- # See this page for more details on how Craft routes requests:
- # http://craftcms.com/docs/routing
- #}
+<!DOCTYPE html>
+<!--[if IE 10]><!--> <html class="no-js ie10" lang="en"> <!--<![endif]-->
+<html class="no-js" lang="en">
+<head>
 
-{% extends "_layout" %}
+  <!-- Set js class -->
+  <script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
 
-{% block content %}
-	<h1>{{ entry.title }}</h1>
+  <!--FontAwesome-->
+  <script src="https://use.fontawesome.com/1a9a355d40.js"></script>
 
-	{{ entry.body }}
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
 
-	<h2>Recent News</h2>
-	<ul>
-		{% for entry in craft.entries.section('news').limit(5).find() %}
-			<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-		{% endfor %}
-	</ul>
-{% endblock %}
+  <title>Portfolio - MG</title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="home" href="{{ siteUrl }}" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- Fonts -->
+  <!-- Typekit here -->
+
+  <!-- Theme colours and icons -->
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="">
+  <meta name="application-name" content=""/>
+  <meta name="theme-color" content="#">
+</head>
+<body class="gid-test">
+  
+  <!-- Browser upgrade -->
+  <!--[if lte IE 10]>
+    <p class="browserupgrade">You are using an outdated browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+    <header class="container container--navigation" role="banner">
+      <div  class="row header">
+        
+        <div class="item header__brand">
+          <div class="nav__toggle">
+                <img class="nav__button" src="assets/images/nav.png">  
+          </div>
+
+          <div class="header__logo">
+              <a href="index.html" class="logo">
+                <img class="site-logo" src="assets/images/logo.png">
+              </a>    
+          </div>
+        </div>
+      
+      
+        <div class="item navigation">
+            <nav class="header__nav" id="nav">
+              <ul class="nav--primary" role="navigation">
+                <li class="nav__item"><a class="nav__link" href="work.html">Work</a></li>
+                <li class="nav__item"><a class="nav__link" href="about.html">About</a></li>
+                <li class="nav__item"><a class="nav__link" href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+      </div>
+      
+    </header>
+
+  <div class="container">
+    <div class="row">
+
+      <div class="item item--twothirds top__headline">
+        <h2>I’m a digital product <wbr> designer &amp; student at <wbr> brunel university. I make <wbr> beautiful things that <wbr> work. </h2>
+      </div>
+
+      <!-- <div class="item item--third top__email">
+        <p>lets chat</p>
+        <a>me@matt-gibbs.com</a>
+      </div> -->
+    </div>
+  </div>
+      
+  <div class="container">
+    <div class="row projects">
+
+      
+      <div class="item project" data-image="url(../images/project1.png)" data-color="#DF006A">
+        <a href="work_entry.html">
+          <div class="project__description">
+            <svg height="2" width="20">
+              <line x1="0" y1="0" x2="20" y2="0" class="project__line"/>
+            </svg>
+            <h3>Cadenza</h3>
+            <p>ui/ux design</p>
+          </div>
+        </a>
+      </div>
+
+
+      <div class="item project">
+        <a href="work_entry.html">
+          <div class="project__description">
+            <svg height="2" width="20">
+              <line x1="0" y1="0" x2="20" y2="0" class="project__line"/>
+            </svg>
+            <h3>Ambio</h3>
+            <p>branding</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="item project">
+        <a href="work_entry.html">
+          <div class="project__description">
+            <svg height="2" width="20">
+              <line x1="0" y1="0" x2="20" y2="0" class="project__line"/>
+            </svg>
+            <h3>Cosmos</h3>
+            <p>branding</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="item project">
+        <a href="work_entry.html">
+          <div class="project__description">
+            <svg height="2" width="20">
+              <line x1="0" y1="0" x2="20" y2="0" class="project__line"/>
+            </svg>
+            <h3>Apply Ignorance</h3>
+            <p>web animation</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="item project">
+        <a href="work_entry.html">
+          <div class="project__description">
+            <svg height="2" width="20">
+              <line x1="0" y1="0" x2="20" y2="0" class="project__line"/>
+            </svg>
+            <h3>Badnoise</h3>
+            <p>webapp build</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="item project">
+        <a href="work_entry.html">
+          <div class="project__description">
+            <svg height="2" width="20">
+              <line x1="0" y1="0" x2="20" y2="0" class="project__line"/>
+            </svg>
+            <h3>Photography</h3>
+            <p>my portfolio</p>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row footer">
+      <div class="item footer__social">
+        <a href="https://twitter.com/mattgibbs69"><i class="fa fa-twitter fa-fw fa-lg social__icon" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/mattgibbs69"><i class="fa fa-instagram fa-fw fa-lg social__icon" aria-hidden="true"></i></a>
+        <a href="https://uk.linkedin.com/in/m4ttg1bbs"><i class="fa fa-linkedin fa-fw fa-lg social__icon" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="item footer__copyright">
+        <footer>
+        <p class="copyright"><small>&copy; Matt Gibbs <script>document.write(new Date().getFullYear())</script></small></p>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <div class="breakpoint"></div>
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+  <!-- Javascript -->
+  <script src="assets/js/load.js"></script>
+
+</body>
+</html>

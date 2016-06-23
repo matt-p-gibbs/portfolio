@@ -1,0 +1,49 @@
+// Work
+// --------------------------------------------------
+
+.map{
+  @include transition(all 0.3s);
+  width:100%;
+  height:30em;
+  z-index:-1;
+
+
+  @include media($small){
+    height:32em;
+  }
+
+  @include media($large){
+    height:36em;
+  }
+}
+
+.map__overlay{
+  background-color:#fff;
+  padding:.5em 0 1em 2em;
+  z-index:9999;
+  font-size:$base-font-size*.9;
+
+  @include media($xsmall){
+    width:16em;
+  }
+
+  @include media($medium){
+  }
+
+  @include media($large){
+    font-size:$base-font-size;
+  }
+}
+
+.map--container{
+  position:relative;
+  margin:-28em 0 13em 0;
+
+  @include media($medium){
+    margin:-28em 0 15em 0;
+  }
+
+  @include media($large){
+    margin:-28em 0 13em 0;
+  }
+}

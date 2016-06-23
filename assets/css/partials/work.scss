@@ -1,0 +1,102 @@
+// Work
+// --------------------------------------------------
+
+.work__page{
+  @include media($small) {
+    @include flex-direction(column);
+  } 
+}
+
+.work__entry {
+  @include transition(all 0.3s);
+  height:28em;
+  padding:1em 1em 1em 0em;
+  line-height:0.4em;
+  box-shadow: none;
+  margin:0;
+  cursor:pointer;
+  max-width: 100%;
+
+  @include media(375px){
+    height:29em;
+    font-size: $base-font-size;
+  }
+
+  @include media(425px){
+    height: 35em;
+  }
+
+  @include media($small) {
+    @include flex-basis(100%);
+    max-width: 100%;
+    height:40em;
+    text-shadow: none;
+  }
+
+  @include media(620px){
+    height:15em;
+  }
+
+  @include media($medium){
+    @include flex-basis(100% !important);
+    max-width: 100% !important;
+    height:22em !important;
+  }
+
+  @include media($large) {
+    height:28em !important;
+  }
+
+}
+  
+
+.work__description{
+  @include transition(all 0.3s);
+  width:100%;
+  color:#fff;
+  padding:.5em 0 .5em 2em;
+  margin-left:0;
+  font-size: $base-font-size*0.9;
+
+  @include media(425px){
+    font-size:$base-font-size;
+    width:18em;
+  }
+
+  @include media($large){
+    margin:2em 0 0 2em;;
+  }
+}
+
+.work__line{
+  stroke:rgb(255,255,255);
+  stroke-width:2;
+}
+
+.work__heading{
+  font-size:$base-font-size*1.2;
+
+
+  @include media($medium){
+    font-size:$base-font-size*1.4;
+  }
+
+  @include media($large){
+    font-size:$base-font-size*1.6;
+  }
+}
+
+.work__summary {
+  line-height:24px;
+}
+
+.work__list {
+  list-style-type: disc;
+  line-height: 1.5em;
+  padding:0 0 1em 2em;
+  display:none;
+
+  @include media($medium){
+    display:block;
+  }
+}

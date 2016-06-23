@@ -1,0 +1,32 @@
+// Index
+// --------------------------------------------------
+
+.picture {
+  @include transition(all 1s);
+  background: url(../images/me.png);
+  background-position:center right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height:5em;
+  margin-top:-3em;
+  margin-bottom:-.5em;
+  
+  @include media($medium){
+    padding-right: 15%;
+    height:auto;
+    margin:2em 0 3em;
+    padding-left:3em;
+    background: url(../images/me.png);
+    background-position:center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &:hover {
+      background: #000 url(../images/me.png);
+      background-position:center right;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}
+

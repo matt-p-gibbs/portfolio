@@ -1,0 +1,226 @@
+// Work
+// --------------------------------------------------
+
+.entry__top{
+  height:25em;
+
+  @include media(375px){
+    height:27em;
+  }
+
+  @include media(425px){
+    height:28.5em;
+  }
+
+  @include media($small){
+    height:32em;
+  }
+
+  @include media(620px){
+    height:21em;
+    padding-top:2em;
+  }
+
+  @include media($medium){
+    height:26em;
+    padding-top:3em;
+  }
+
+  @include media($large){
+    height:32em;
+    padding-top:4em;
+  }
+}
+
+.entry__color{
+  @include transition(all 0.3s);
+  width:100%;
+  height:29em;
+  background: #DF006A url(../images/cadenza_big.png);
+  background-position: right bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position:absolute;
+  top:0;
+  z-index:-1;
+
+  @include media(375px){
+    height:31em;
+  }
+
+  @include media(425px){
+    height:32.5em;
+  }
+
+  @include media($small){
+    height:36em;
+  }
+
+  @include media(620px){
+    height:25em;
+    background-size: 70%;
+  }
+
+  @include media($medium){
+    height:30em;
+    background-size: 70%;
+  }
+
+  @include media($large){
+    height:38em;
+  }
+
+  @include media(1255px){
+    background-size: auto 575px;
+  }
+
+  .nav-color & {
+    @include media($xsmall){
+      height:36.2em;
+    }
+
+    @include media(375px){
+      height:38.2em;
+    }
+
+    @include media(425px){
+      height:39.7em;
+    }
+
+    @include media($small){
+      height:43.2em;
+    }
+
+    @include media(620px){
+      height:32.2em;
+    }
+  }
+}
+
+.entry__title{
+  font-size:$h2-font-size;
+  color:#fff;
+  margin-bottom:0.2em;
+
+  @include media($medium){
+    font-size:$h2-font-size*1.2
+  }
+
+  @include media($large){
+    font-size:$h2-font-size*1.5
+  }
+}
+
+.entry__header--holder{
+  text-align:left;
+  padding:0;
+  width:100%;
+  font-size:$base-font-size*0.9;
+}
+
+.entry__header{
+  color:#000;
+  margin:0;
+  width:70%;
+  @include media($medium){
+    margin:0 auto;
+    width:20em;
+  }
+}
+
+.entry__summary{
+  @include media(620px){
+    width:10em;
+  }
+}
+
+.entry__stats{
+  @include order(4);
+  padding:0;
+  @include media($medium){
+    @include order(3);
+    text-align:right;
+    padding-right: 1em;
+  }
+}
+
+.entry__body{
+  @include order(3);
+  padding:0em;
+
+  @include media($medium){
+    @include order(4);
+    padding-right:8.5em;
+  }
+
+  @include media($large){
+    padding-right:10em;
+  }
+
+  @include media($xlarge){
+    padding-right:12em;
+  }
+}
+
+.entry__body, .entry__stats{
+  font-size:$base-font-size*0.9;
+}
+
+.entry__images{
+  @include transition(all 0.3s);
+  width:100%;
+  height:29em;
+  z-index:11;
+
+  @include media(375px){
+    height:31em;
+  }
+
+  @include media(425px){
+    height:32.5em;
+  }
+
+  @include media($small){
+    height:36em;
+  }
+
+  @include media(620px){
+    height:25em;
+  }
+
+  @include media($medium){
+    height:30em;
+  }
+
+  @include media($large){
+    height:38em;
+  }
+}
+
+.entry__images:nth-child(1){
+  background: url(../images/cad_3.png);
+  background-position:center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.entry__images:nth-child(2){
+  background: url(../images/cad_2.png);
+  background-position:center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.entry__images:nth-child(3){
+  background: url(../images/cad_1.png);
+  background-position:center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom:1em;
+}
+
+.button--container{
+  @include justify-content(center);
+  @include flex-direction(row);
+  width:100%;
+}

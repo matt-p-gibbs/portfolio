@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--[if IE 10]><!--> <html class="no-js ie10" lang="en"> <!--<![endif]-->
+<html class="no-js" lang="en">
+<head>
+
+  <!-- Set js class -->
+  <script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
+
+  <!--FontAwesome-->
+  <script src="https://use.fontawesome.com/1a9a355d40.js"></script>
+
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+
+  <title>Contact - MG</title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="home" href="{{ siteUrl }}" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- Fonts -->
+  <!-- Typekit here -->
+
+  <!-- Theme colours and icons -->
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="">
+  <meta name="application-name" content=""/>
+  <meta name="theme-color" content="#">
+</head>
+<body class="gri-test">
+  
+  <!-- Browser upgrade -->
+  <!--[if lte IE 10]>
+    <p class="browserupgrade">You are using an outdated browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+    <header class="container container--navigation" role="banner">
+      <div  class="row header">
+        
+        <div class="item header__brand">
+          <div class="nav__toggle">
+                <img class="nav__button" src="assets/images/nav.png">  
+          </div>
+
+          <div class="header__logo">
+              <a href="index.html" class="logo">
+                <img class="site-logo" src="assets/images/logo.png">
+              </a>    
+          </div>
+        </div>
+      
+      
+        <div class="item navigation">
+            <nav class="header__nav" id="nav">
+              <ul class="nav--primary" role="navigation">
+                <li class="nav__item"><a class="nav__link" href="work.html">Work</a></li>
+                <li class="nav__item"><a class="nav__link" href="about.html">About</a></li>
+                <li class="nav__item active"><a class="nav__link" href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+      </div>
+      
+    </header>
+
+  <div class="container">
+    <div class="row">
+
+      <div class="item top__headline">
+        <h2>Like what you see? Maybe we should talk.</h2>
+        <h4>I am currently working as a Digital Product Designer for a fabulous little agency called <a href="http://www.inktrap.co.uk">Inktrap</a> so am not accepting new freelance clients. However - if you have something cool to talk about I'm always interested...</h4>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="main">
+     
+    <div class="map" id="map"></div>
+
+    <div class="container map--container">
+       <div class="row map--overlay___row"> 
+        <div class="item item--third map__overlay">
+          <h2>Contact Me Here</h2>
+          <p>Aldgate Tower <br>
+          Whitechapel High Street<br> 
+          London <br>
+          E1 7PU</p>
+          
+          <p><i class="fa fa-phone fa-fw social__icon" aria-hidden="true"></i>07778811215</p>
+          <p><i class="fa fa-envelope fa-fw social__icon" aria-hidden="true"></i>me@matt-gibbs.com</p>
+
+
+        </div>
+      </div>
+    </div>
+  
+  </div>
+
+  <div class="row button--container">
+    <a href="work.html"><button class="btn--secondary">Need another look at my work?</button></a>
+  </div>
+
+  <div class="container">
+    <div class="row footer">
+      <div class="item footer__social">
+        <a href="https://twitter.com/mattgibbs69"><i class="fa fa-twitter fa-fw fa-lg social__icon" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/mattgibbs69"><i class="fa fa-instagram fa-fw fa-lg social__icon" aria-hidden="true"></i></a>
+        <a href="https://uk.linkedin.com/in/m4ttg1bbs"><i class="fa fa-linkedin fa-fw fa-lg social__icon" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="item footer__copyright">
+        <footer>
+        <p class="copyright"><small>&copy; Matt Gibbs <script>document.write(new Date().getFullYear())</script></small></p>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <div class="breakpoint"></div>
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+  <!-- Javascript -->
+  <script src="assets/js/load.js"></script>
+
+  <!--Map Script-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKzgG-04OAhw64nFzBAF52h9XS8XuM2rc&callback=initMap" async defer></script>
+  <script>
+    function initMap() {
+        var myLatLng = {lat: 51.5148623, lng: -0.07222109999997883};
+
+        var mapOptions = {
+            zoom: 16,
+            disableDefaultUI: true,
+            center: myLatLng, 
+            styles: [{"elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#0F0919"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#E4F7F7"}]},{"elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#002FA7"}]},{"featureType":"poi.attraction","elementType":"geometry.fill","stylers":[{"color":"#E60003"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#FBFCF4"}]},{"featureType":"poi.business","elementType":"geometry.fill","stylers":[{"color":"#FFED00"}]},{"featureType":"poi.government","elementType":"geometry.fill","stylers":[{"color":"#D41C1D"}]},{"featureType":"poi.school","elementType":"geometry.fill","stylers":[{"color":"#BF0000"}]},{"featureType":"transit.line","elementType":"geometry.fill","stylers":[{"saturation":-100}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"on"}]}]
+        };
+        var mapElement = document.getElementById('map');
+        var map = new google.maps.Map(mapElement, mapOptions);
+
+        var myIcon = new google.maps.MarkerImage("assets/images/pin.png", null, null, null, new google.maps.Size(50,50));
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          animation: google.maps.Animation.DROP,
+          icon: myIcon
+        });
+
+        marker.setMap(map);
+    }
+
+  </script>
+  
+
+</body>
+</html>
