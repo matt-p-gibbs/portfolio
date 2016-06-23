@@ -47,7 +47,7 @@
           </div>
 
           <div class="header__logo">
-              <a href="index.html" class="logo">
+              <a href="/" class="logo">
                 <img class="site-logo" src="assets/images/logo.png">
               </a>    
           </div>
@@ -57,9 +57,9 @@
         <div class="item navigation">
             <nav class="header__nav" id="nav">
               <ul class="nav--primary" role="navigation">
-                <li class="nav__item"><a class="nav__link" href="work.html">Work</a></li>
-                <li class="nav__item"><a class="nav__link" href="about.html">About</a></li>
-                <li class="nav__item"><a class="nav__link" href="contact.html">Contact</a></li>
+                <li class="nav__item"><a class="nav__link" href="/work">Work</a></li>
+                <li class="nav__item active"><a class="nav__link" href="/about">About</a></li>
+                <li class="nav__item"><a class="nav__link" href="/contact">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -71,8 +71,8 @@
     <div class="row">
 
       <div class="item top__headline">
-        <h2>About Me</h2>
-        <h4>I've done many things - some of them uninteresting - most of them legendary.</h4>
+        <h2>{{ entry.mainHeading }}</h2>
+        <h4>{{ entry.subHeading }}</h4>
       </div>
 
       <div class="item item--third picture"></div>
@@ -83,20 +83,14 @@
 
     <div class="row work__content">
       <div class="item item--third entry__stats">
-        <b>Current Employer</b>
-        <p><a href="http://www.inktrap.co.uk">Inktrap</a></p>
-        <b>Education</b>
-        <p>2nd Year Digital Design BSc @ Brunel University</p>
-        <b>Skills</b>
-        <p>Sketch, Invision, UI, UX, Adobe Suite, HTML, CSS, jQuery, PHP, SQL, Web Design, Photography</p>
+        <b>{{ entry.leftHeading1 }}</b>
+        {{ entry.leftContent1 }}
+        <b>{{ entry.leftHeading2 }}</b>
+        <p>{{ entry.leftContent2 }}</p>
+        <b>{{ entry.leftHeading3 }}</b>
+        <p>{{ entry.leftContent3 }}</p>
       </div>
-      <div class="item item--twothirds entry__body">
-        <p>This was completed as an assignment for my Design for Mobile module at university. The brief was very open – create an app for a smartphone. I have an iPhone so I decided to design for what I knew, and what I could test myself.</p>
-
-        <p>The idea of the app is now something I am pursuing in the real world – I am starting to learn to code in Swift, and have acquired the social media accounts. I intend to develop the app, and market it myself over the coming year. What you see here was created and exported entirely from Sketch – then entered into InVision to create the working prototype at the bottom of the page.</p>
-
-        <p>Put simply, the app helps musicians to acquire business, and people who need talented artists to find them. The app allows people to post jobs, and post pay details, or expenses. They also include the skills they require, and what level they need them to be. The musician has a profile which includes all of this information.</p>
-      </div>
+      <div class="item item--twothirds entry__body">{{ entry.body }}</div>
     </div>
   </div>
 

@@ -47,7 +47,7 @@
           </div>
 
           <div class="header__logo">
-              <a href="index.html" class="logo">
+              <a href="/" class="logo">
                 <img class="site-logo" src="assets/images/logo.png">
               </a>    
           </div>
@@ -57,9 +57,9 @@
         <div class="item navigation">
             <nav class="header__nav" id="nav">
               <ul class="nav--primary" role="navigation">
-                <li class="nav__item"><a class="nav__link" href="work.html">Work</a></li>
-                <li class="nav__item"><a class="nav__link" href="about.html">About</a></li>
-                <li class="nav__item active"><a class="nav__link" href="contact.html">Contact</a></li>
+                <li class="nav__item"><a class="nav__link" href="/work">Work</a></li>
+                <li class="nav__item"><a class="nav__link" href="/about">About</a></li>
+                <li class="nav__item active"><a class="nav__link" href="/contact">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -71,8 +71,8 @@
     <div class="row">
 
       <div class="item top__headline">
-        <h2>Like what you see? Maybe we should talk.</h2>
-        <h4>I am currently working as a Digital Product Designer for a fabulous little agency called <a href="http://www.inktrap.co.uk">Inktrap</a> so am not accepting new freelance clients. However - if you have something cool to talk about I'm always interested...</h4>
+        <h2>{{ entry.mainHeading }}</h2>
+        <h4>{{ entry.subHeading }}</h4>
       </div>
 
     </div>
@@ -86,13 +86,10 @@
        <div class="row map--overlay___row"> 
         <div class="item item--third map__overlay">
           <h2>Contact Me Here</h2>
-          <p>Aldgate Tower <br>
-          Whitechapel High Street<br> 
-          London <br>
-          E1 7PU</p>
+          <p>{{ entry.address | markdown }}</p>
           
-          <p><i class="fa fa-phone fa-fw social__icon" aria-hidden="true"></i>07778811215</p>
-          <p><i class="fa fa-envelope fa-fw social__icon" aria-hidden="true"></i>me@matt-gibbs.com</p>
+          <p><i class="fa fa-phone fa-fw social__icon" aria-hidden="true"></i>{{ entry.phoneNumber }}</p>
+          <p><i class="fa fa-envelope fa-fw social__icon" aria-hidden="true"></i>{{ entry.email }}</p>
 
 
         </div>
@@ -102,7 +99,7 @@
   </div>
 
   <div class="row button--container">
-    <a href="work.html"><button class="btn--secondary">Need another look at my work?</button></a>
+    <a href="/work"><button class="btn--secondary">Need another look at my work?</button></a>
   </div>
 
   <div class="container">
@@ -134,7 +131,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKzgG-04OAhw64nFzBAF52h9XS8XuM2rc&callback=initMap" async defer></script>
   <script>
     function initMap() {
-        var myLatLng = {lat: 51.5148623, lng: -0.07222109999997883};
+        var myLatLng = {{ entry.mapLocation }};
 
         var mapOptions = {
             zoom: 16,
