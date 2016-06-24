@@ -97,7 +97,7 @@
 
         {% for entry in craft.entries.section('work').find() %}
 
-          <div class="item project work__entry" style="background: {{ entry.primaryColor }} {{ entry.primaryImage }}; background-position: right bottom; background-size: contain; background-repeat: no-repeat;">
+          <div class="item project work__entry" style="background: {{ entry.primaryColor }} {% for image in entry.primaryImage %} url({{ image.getUrl() }}) {% endfor %}; background-position: right bottom; background-size: contain; background-repeat: no-repeat;">
 
             <div class="work__description">
               <svg height="2" width="20">
@@ -113,7 +113,7 @@
                   {% for service in entry.workList %}
                     <li>{{ service.title }}</li>
                   {% endfor %}
-                  
+
                 </ul>
 
               {% endif %}

@@ -85,8 +85,8 @@
     <div class="row">
 
       <div class="item item--twothirds top__headline">
-        <h2 class="entry__title">Cadenza</h2>
-        <p class="entry__summary white">An application and Invision protoype connecting musicians to their next gigs.</p>
+        <h2 class="entry__title">{{ entry.mainHeading }}</h2>
+        <p class="entry__summary white">{{ entry.topSummary }}</p>
         <svg height="2" width="20">
           <line x1="0" y1="0" x2="20" y2="0" class="work__line"/>
         </svg>
@@ -95,7 +95,7 @@
     </div>
   </div>
   
-  <div class="entry__color">
+  <div class="entry__color" style="background: {{ entry.primaryColor }} ;" >
 
   </div>
 
@@ -103,36 +103,32 @@
     <div class="row work__topline">
 
       <div class="item entry__header--holder">
-        <h3 class="entry__header">An application and Invision protoype connecting musicians to their next gigs.</h3>
+        <h3 class="entry__header"> {{ entry.bodyHeader }}</h3>
       </div>
 
     </div>
 
     <div class="row work__content">
       <div class="item item--third entry__stats">
-        <b>Module</b>
-        <p>Mobile Application Design</p>
-        <b>Grade Received</b>
-        <p>A</p>
-        <b>Skills Required</b>
-        <p>Sketch, Invision, UI, UX</p>
+        <b>{{ entry.leftHeading1 }}</b>
+        <p>{{ entry.leftContent1 }}</p>
+        <b>{{ entry.leftHeading2 }}</b>
+        <p>{{ entry.leftContent2 }}</p>
+        <b>{{ entry.leftHeading3 }}</b>
+        <p>{{ entry.leftContent3 }}</p>
       </div>
       <div class="item item--twothirds entry__body">
-        <p>This was completed as an assignment for my Design for Mobile module at university. The brief was very open – create an app for a smartphone. I have an iPhone so I decided to design for what I knew, and what I could test myself.</p>
-
-        <p>The idea of the app is now something I am pursuing in the real world – I am starting to learn to code in Swift, and have acquired the social media accounts. I intend to develop the app, and market it myself over the coming year. What you see here was created and exported entirely from Sketch – then entered into InVision to create the working prototype at the bottom of the page.</p>
-
-        <p>Put simply, the app helps musicians to acquire business, and people who need talented artists to find them. The app allows people to post jobs, and post pay details, or expenses. They also include the skills they require, and what level they need them to be. The musician has a profile which includes all of this information.</p>
+        {{ entry.body }}
       </div>
     </div>
   </div>
   
   <div class="images">
-    <div class="entry__images"></div>
+    <div class="entry__images" style="background-image: {% for image in entry.projectImage1 %} url({{ image.getUrl() }}) {% endfor %};"></div>
 
-    <div class="entry__images"></div>
+    <div class="entry__images" style="background-image: {% for image in entry.projectImage2 %} url({{ image.getUrl() }}) {% endfor %};"></div>
 
-    <div class="entry__images"></div>
+    <div class="entry__images" style="background-image: {% for image in entry.projectImage3 %} url({{ image.getUrl() }}) {% endfor %};"></div>
   </div>
 
   <div class="row button--container">
