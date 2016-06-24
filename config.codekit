@@ -24853,6 +24853,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/craft\/storage\/runtime\/compiled_templates\/2d\/2d8fb7168f525ef979dfefbf4de5890282aa71680b10ccb4bacf38fa13ec9e3b.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/craft\/storage\/runtime\/compiled_templates\/2d\/2d8fb7168f525ef979dfefbf4de5890282aa71680b10ccb4bacf38fa13ec9e3b.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/craft\/storage\/runtime\/compiled_templates\/38\/387a1abf4e4bc4c427d6a95681a8f9eda50d22c5f5aebc181728aecc22a1c44d.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -25360,20 +25369,20 @@
 		"randomFootnoteNumbers": 0,
 		"useCompatibilityMode": 0
 		},
-	"\/craft\/templates\/work.html": {
+	"\/craft\/templates\/work\/_entry.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/craft\/templates\/work.html",
+		"inputAbbreviatedPath": "\/craft\/templates\/work\/_entry.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/craft\/templates\/work_entry.html": {
+	"\/craft\/templates\/work\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/craft\/templates\/work_entry.html",
+		"inputAbbreviatedPath": "\/craft\/templates\/work\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

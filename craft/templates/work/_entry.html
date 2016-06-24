@@ -20,25 +20,25 @@
   <link rel="home" href="{{ siteUrl }}" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
 
   <!-- Fonts -->
   <!-- Typekit here -->
 
   <!-- Theme colours and icons -->
-  <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="assets/images/favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="../assets/images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../assets/images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../assets/images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../assets/images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../assets/images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../assets/images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../assets/images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="../assets/images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../assets/images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/favicon-16x16.png">
   <link rel="manifest" href="/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
@@ -57,12 +57,12 @@
         
         <div class="item header__brand">
           <div class="nav__toggle">
-                <img class="nav__button--invert" src="assets/images/nav_invert.png">  
+                <img class="nav__button--invert" src="../assets/images/nav_invert.png">  
           </div>
 
           <div class="header__logo">
               <a href="/" class="logo">
-                <img class="site-logo" src="assets/images/logo_invert.png">
+                <img class="site-logo" src="../assets/images/logo_invert.png">
               </a>    
           </div>
         </div>
@@ -95,7 +95,7 @@
     </div>
   </div>
   
-  <div class="entry__color" style="background: {{ entry.primaryColor }} ;" >
+  <div class="entry__color" style="background: {{ entry.primaryColor }}; background-position: right bottom; background-size: contain; background-repeat: no-repeat;" >
 
   </div>
 
@@ -124,11 +124,11 @@
   </div>
   
   <div class="images">
-    <div class="entry__images" style="background-image: {% for image in entry.projectImage1 %} url({{ image.getUrl() }}) {% endfor %};"></div>
+    <div class="entry__images" style="background: {% for image in entry.projectImage1 %} url({{ image.getUrl() }}) {% endfor %};  background-position:center center; background-size: cover; background-repeat: no-repeat;"></div>
 
-    <div class="entry__images" style="background-image: {% for image in entry.projectImage2 %} url({{ image.getUrl() }}) {% endfor %};"></div>
+    <div class="entry__images" style="background: {% for image in entry.projectImage2 %} url({{ image.getUrl() }}) {% endfor %}; background-position:center center; background-size: cover; background-repeat: no-repeat;"></div>
 
-    <div class="entry__images" style="background-image: {% for image in entry.projectImage3 %} url({{ image.getUrl() }}) {% endfor %};"></div>
+    <div class="entry__images" style="background: {% for image in entry.projectImage3 %} url({{ image.getUrl() }}) {% endfor %}; background-position:center center; background-size: cover; background-repeat: no-repeat;"></div>
   </div>
 
   <div class="row button--container">
@@ -158,7 +158,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
   <!-- Javascript -->
-  <script src="assets/js/load.js"></script>
+  <script src="../assets/js/load.js"></script>
 
 </body>
 </html>

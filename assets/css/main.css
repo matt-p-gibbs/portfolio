@@ -1073,10 +1073,6 @@ hr {
   transition: all 0.3s;
   width: 100%;
   height: 29em;
-  background: #DF006A url(../images/cadenza_big.png);
-  background-position: right bottom;
-  background-size: contain;
-  background-repeat: no-repeat;
   position: absolute;
   top: 0;
   z-index: -1; }
@@ -1224,25 +1220,6 @@ hr {
   @media only screen and (min-width: 960px) {
     .entry__images {
       height: 38em; } }
-
-.entry__images:nth-child(1) {
-  background: url(../images/cad_3.png);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.entry__images:nth-child(2) {
-  background: url(../images/cad_2.png);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.entry__images:nth-child(3) {
-  background: url(../images/cad_1.png);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-bottom: 1em; }
 
 .button--container {
   -webkit-box-pack: center;
