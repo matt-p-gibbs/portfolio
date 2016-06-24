@@ -93,101 +93,39 @@
   <div class="container">
     <div class="row work__page">
 
-      <div class="item project work__entry" data-image="url(../images/project1.png)" data-color="#DF006A">
-        <div class="work__description">
-          <svg height="2" width="20">
-            <line x1="0" y1="0" x2="20" y2="0" class="work__line"/>
-          </svg>
-          <h3 class="work__heading">Cadenza</h3>
-          <p class="work__summary">An application and Invision protoype connecting musicians to their next gigs.</p>
-          <ul class="work__list">
-            <li>UI/UX Design</li>
-            <li>Sketch Design</li>
-            <li>Invision Prototyping</li>
-          </ul>
-          <a href="work_entry.html"><button class="btn">View more...</button></a>
-        </div>
-      </div>
+      {% cache %}
 
-      <div class="item project work__entry">
-        <div class="work__description">
-          <svg height="2" width="20">
-            <line x1="0" y1="0" x2="20" y2="0" class="work__line"/>
-          </svg>
-          <h3 class="work__heading">Ambio</h3>
-          <p class="work__summary">Future technology project utilising ambient intellgience in a home environment.</p>
-          <ul class="work__list">
-            <li>UI Design</li>
-            <li>Emerging Technology Development</li>
-            <li>Branding</li>
-          </ul>
-          <a href="work_entry.html"><button class="btn">View more...</button></a>
-        </div>
-      </div>
+        {% for entry in craft.entries.section('work').find() %}
 
-      <div class="item project work__entry">
-        <div class="work__description">
-          <svg height="2" width="20">
-            <line x1="0" y1="0" x2="20" y2="0" class="work__line"/>
-          </svg>
-          <h3 class="work__heading">Cosmos</h3>
-          <p class="work__summary">Branding, and proposal project for a new premium petrol retail brand.</p>
-          <ul class="work__list">
-            <li>Branding</li>
-            <li>Sketch Design</li>
-            <li>Presentation</li>
-          </ul>
-          <a href="work_entry.html"><button class="btn">View more...</button></a>
-        </div>
-      </div>
+          <div class="item project work__entry" style="background: {{ entry.primaryColor }} {{ entry.primaryImage }}; background-position: right bottom; background-size: contain; background-repeat: no-repeat;">
 
-      <div class="item project work__entry">
-        <div class="work__description">
-          <svg height="2" width="20">
-            <line x1="0" y1="0" x2="20" y2="0" class="work__line"/>
-          </svg>
-          <h3 class="work__heading">Apply Ignorance</h3>
-          <p class="work__summary">Storytelling through the web using an Adobe Muse scrolling website format.</p>
-          <ul class="work__list">
-            <li>Adobe Muse</li>
-            <li>Illustration</li>
-            <li>Website Development</li>
-          </ul>
-          <a href="work_entry.html"><button class="btn">View more...</button></a>
-        </div>
-      </div>
+            <div class="work__description">
+              <svg height="2" width="20">
+                <line x1="0" y1="0" x2="20" y2="0" class="work__line"/>
+              </svg>
+              <h3 class="work__heading"> {{ entry.mainHeading }} </h3>
+              <p class="work__summary">{{ entry.subHeading }}</p>
+              
+              {% if entry.workList %}
 
-      <div class="item project work__entry">
-        <div class="work__description">
-          <svg height="2" width="20">
-            <line x1="0" y1="0" x2="20" y2="0" class="work__line"/>
-          </svg>
-          <h3 class="work__heading">Badnoise</h3>
-          <p class="work__summary">Responsive web application development project for a music streaming service.</p>
-          <ul class="work__list">
-            <li>Webapp Development</li>
-            <li>PHP, SQL, jQuery, HTML and CSS</li>
-            <li>Sketch UI Design</li>
-          </ul>
-          <a href="work_entry.html"><button class="btn">View more...</button></a>
-        </div>
-      </div>
+                <ul class="work__list">
 
-      <div class="item project work__entry">
-        <div class="work__description">
-          <svg height="2" width="20">
-            <line x1="0" y1="0" x2="20" y2="0" class="work__line"/>
-          </svg>
-          <h3 class="work__heading">Photography</h3>
-          <p class="work__summary">A selection of my personal and professional photographs.</p>
-          <ul class="work__list">
-            <li>Studio Lighting</li>
-            <li>Landscape Photography</li>
-            <li>Freelance Photography</li>
-          </ul>
-          <a href="work_entry.html"><button class="btn">View more...</button></a>
-        </div>
-      </div>
+                  {% for service in entry.workList %}
+                    <li>{{ service.title }}</li>
+                  {% endfor %}
+                  
+                </ul>
+
+              {% endif %}
+
+              <a href="{{ siteUrl }}work/{{ entry.slug }}""><button class="btn">View more...</button></a>
+            </div>
+
+          </div>
+      
+        {% endfor %}
+
+      {% endcache %}
 
     </div>
   </div>
