@@ -21,6 +21,20 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="../assets/css/main.css">
+  <style>
+    @media only screen and (min-width: 620px) {
+      .entry__color{
+        background-size: 70%;
+      }
+    }
+    
+    @media only screen and (min-width: 1255px){
+      .entry__color {
+        background-size: auto 575px;
+      }
+    }
+
+  </style>
 
   <!-- Fonts -->
   <!-- Typekit here -->
@@ -95,7 +109,7 @@
     </div>
   </div>
   
-  <div class="entry__color" style="background: {{ entry.primaryColor }} {% for image in entry.headerImage %} url({{ image.getUrl() }}) {% endfor %};; background-position: right bottom; background-size: contain; background-repeat: no-repeat; @media only screen and (min-width: {620px}) { background-size: 70%; } @media only screen and (min-width: {1255px}) {background-size: auto 575px; }" >
+  <div class="entry__color" style="background: {{ entry.primaryColor }} {% for image in entry.headerImage %} url({{ image.getUrl() }}) {% endfor %}; background-position: right bottom; background-size: contain; background-repeat: no-repeat;" >
 
   </div>
 
