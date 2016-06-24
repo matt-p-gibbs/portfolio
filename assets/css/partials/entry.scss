@@ -54,20 +54,14 @@
 
   @include media(620px){
     height:25em;
-    background-size: 70%;
   }
 
   @include media($medium){
     height:30em;
-    background-size: 70%;
   }
 
   @include media($large){
     height:38em;
-  }
-
-  @include media(1255px){
-    background-size: auto 575px;
   }
 
   .nav-color & {

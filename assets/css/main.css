@@ -1087,18 +1087,13 @@ hr {
       height: 36em; } }
   @media only screen and (min-width: 620px) {
     .entry__color {
-      height: 25em;
-      background-size: 70%; } }
+      height: 25em; } }
   @media only screen and (min-width: 760px) {
     .entry__color {
-      height: 30em;
-      background-size: 70%; } }
+      height: 30em; } }
   @media only screen and (min-width: 960px) {
     .entry__color {
       height: 38em; } }
-  @media only screen and (min-width: 1255px) {
-    .entry__color {
-      background-size: auto 575px; } }
   @media only screen and (min-width: 288px) {
     .nav-color .entry__color {
       height: 36.2em; } }

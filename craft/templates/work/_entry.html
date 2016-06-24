@@ -95,7 +95,7 @@
     </div>
   </div>
   
-  <div class="entry__color" style="background: {{ entry.primaryColor }}; background-position: right bottom; background-size: contain; background-repeat: no-repeat;" >
+  <div class="entry__color" style="background: {{ entry.primaryColor }} {% for image in entry.headerImage %} url({{ image.getUrl() }}) {% endfor %};; background-position: right bottom; background-size: contain; background-repeat: no-repeat; @media only screen and (min-width: {620px}) { background-size: 70%; } @media only screen and (min-width: {1255px}) {background-size: auto 575px; }" >
 
   </div>
 
