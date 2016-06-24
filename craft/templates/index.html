@@ -99,75 +99,75 @@
     <div class="row projects">
 
       
-      <div class="item project" data-image="url(../images/project1.png)" data-color="#DF006A">
+      <div class="item project" style="background: {{ entry.primaryColor1 }} {% for image in entry.primaryImage1 %} url({{ image.getUrl() }}) {% endfor %}; background-position: right bottom; background-size: contain; background-repeat: no-repeat;">
         <a href="work_entry.html">
           <div class="project__description">
             <svg height="2" width="20">
               <line x1="0" y1="0" x2="20" y2="0" class="project__line"/>
             </svg>
-            <h3>Cadenza</h3>
-            <p>ui/ux design</p>
+            <h3>{{ entry.projectHeading1 }}</h3>
+            <p>{{ entry.projectDesc1 }}</p>
           </div>
         </a>
       </div>
 
 
-      <div class="item project">
+      <div class="item project" style="background: {{ entry.primaryColor2 }} {% for image in entry.primaryImage2 %} url({{ image.getUrl() }}) {% endfor %}; background-position: right bottom; background-size: contain; background-repeat: no-repeat;">
         <a href="work_entry.html">
           <div class="project__description">
             <svg height="2" width="20">
               <line x1="0" y1="0" x2="20" y2="0" class="project__line"/>
             </svg>
-            <h3>Ambio</h3>
-            <p>branding</p>
+            <h3>{{ entry.projectHeading2 }}</h3>
+            <p>{{ entry.projectDesc2 }}</p>
           </div>
         </a>
       </div>
 
-      <div class="item project">
+      <div class="item project" style="background: {{ entry.primaryColor3 }} {% for image in entry.primaryImage3 %} url({{ image.getUrl() }}) {% endfor %}; background-position: right bottom; background-size: contain; background-repeat: no-repeat;">
         <a href="work_entry.html">
           <div class="project__description">
             <svg height="2" width="20">
               <line x1="0" y1="0" x2="20" y2="0" class="project__line"/>
             </svg>
-            <h3>Cosmos</h3>
-            <p>branding</p>
+            <h3>{{ entry.projectHeading3 }}</h3>
+            <p>{{ entry.projectDesc3 }}</p>
           </div>
         </a>
       </div>
 
-      <div class="item project">
+      <div class="item project" style="background: {{ entry.primaryColor4 }} {% for image in entry.primaryImage4 %} url({{ image.getUrl() }}) {% endfor %}; background-position: right bottom; background-size: contain; background-repeat: no-repeat;">
         <a href="work_entry.html">
           <div class="project__description">
             <svg height="2" width="20">
               <line x1="0" y1="0" x2="20" y2="0" class="project__line"/>
             </svg>
-            <h3>Apply Ignorance</h3>
-            <p>web animation</p>
+            <h3>{{ entry.projectHeading4 }}</h3>
+            <p>{{ entry.projectDesc4 }}</p>
           </div>
         </a>
       </div>
 
-      <div class="item project">
+      <div class="item project" style="background: {{ entry.primaryColor5 }} {% for image in entry.primaryImage5 %} url({{ image.getUrl() }}) {% endfor %}; background-position: right bottom; background-size: contain; background-repeat: no-repeat;">
         <a href="work_entry.html">
           <div class="project__description">
             <svg height="2" width="20">
               <line x1="0" y1="0" x2="20" y2="0" class="project__line"/>
             </svg>
-            <h3>Badnoise</h3>
-            <p>webapp build</p>
+            <h3>{{ entry.projectHeading5 }}</h3>
+            <p>{{ entry.projectDesc5 }}</p>
           </div>
         </a>
       </div>
 
-      <div class="item project">
+      <div class="item project" style="background: {{ entry.primaryColor6 }} {% for image in entry.primaryImage6 %} url({{ image.getUrl() }}) {% endfor %}; background-position: right bottom; background-size: contain; background-repeat: no-repeat;">
         <a href="work_entry.html">
           <div class="project__description">
             <svg height="2" width="20">
               <line x1="0" y1="0" x2="20" y2="0" class="project__line"/>
             </svg>
-            <h3>Photography</h3>
-            <p>my portfolio</p>
+            <h3>{{ entry.projectHeading6 }}</h3>
+            <p>{{ entry.projectDesc6 }}</p>
           </div>
         </a>
       </div>
