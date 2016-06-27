@@ -129,6 +129,8 @@
 
     </div>
 
+    {% cache %}
+
     <div class="row work__content">
       <div class="item item--third entry__stats">
         <b>{{ entry.leftHeading1 }}</b>
@@ -172,6 +174,8 @@
       </div>
     </div>
   </div>
+
+  {% endcache %}
 
   <div class="breakpoint"></div>
 
