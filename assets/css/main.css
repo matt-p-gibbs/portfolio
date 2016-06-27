@@ -430,7 +430,8 @@ body {
     background-color: #fff;
     color: #000; }
   .btn:focus {
-    color: #fff; }
+    color: #000;
+    outline: 0; }
 
 .btn--secondary {
   -webkit-transition: background 0.2s;
@@ -450,7 +451,8 @@ body {
     color: #fff;
     border-color: #fff; }
   .btn--secondary:focus {
-    color: #29ABE2; }
+    color: #fff;
+    outline: 0; }
 
 .btn--link {
   padding-left: 0;
@@ -1599,11 +1601,25 @@ hr {
       -moz-flex-basis: 100%;
       flex-basis: 100%;
       -ms-flex-preferred-size: 100%;
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      box-flex: 1;
+      -webkit-flex: 1 0 40em;
+      -moz-flex: 1 0 40em;
+      -ms-flex: 1 0 40em;
+      flex: 1 0 40em;
       max-width: 100%;
       height: 40em;
       text-shadow: none; } }
   @media only screen and (min-width: 620px) {
     .work__entry {
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      box-flex: 1;
+      -webkit-flex: 1 0 15em;
+      -moz-flex: 1 0 15em;
+      -ms-flex: 1 0 15em;
+      flex: 1 0 15em;
       height: 15em; } }
   @media only screen and (min-width: 760px) {
     .work__entry {
@@ -1611,10 +1627,24 @@ hr {
       -moz-flex-basis: 100% !important;
       flex-basis: 100% !important;
       -ms-flex-preferred-size: 100% !important;
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      box-flex: 1;
+      -webkit-flex: 1 0 22em !important;
+      -moz-flex: 1 0 22em !important;
+      -ms-flex: 1 0 22em !important;
+      flex: 1 0 22em !important;
       max-width: 100% !important;
       height: 22em !important; } }
   @media only screen and (min-width: 960px) {
     .work__entry {
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      box-flex: 1;
+      -webkit-flex: 1 0 28em !important;
+      -moz-flex: 1 0 28em !important;
+      -ms-flex: 1 0 28em !important;
+      flex: 1 0 28em !important;
       height: 28em !important; } }
 
 .work__description {
