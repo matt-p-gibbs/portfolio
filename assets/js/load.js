@@ -11,10 +11,10 @@ $(document).ready(function() {
     });
 
     $('.nav__button--invert').click(function(){
-      if ($(this).attr('src') === 'assets/images/nav_invert.png'){
-        $(this).attr("src", 'assets/images/nav_close_invert.png');
+      if ($(this).attr('src') === '../assets/images/nav_invert.png'){
+        $(this).attr("src", '../assets/images/nav_close_invert.png');
       } else {
-        $(this).attr("src", 'assets/images/nav_invert.png');
+        $(this).attr("src", '../assets/images/nav_invert.png');
       }
 
       $('body').toggleClass('nav-visible');
