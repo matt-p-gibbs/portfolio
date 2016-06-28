@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="../assets/css/main.css">
   <style>
     .entry__color{
-      background: {{ entry.primaryColor }} {% for image in entry.headerImage %} url({{ image.getUrl() }}) {% endfor %}; 
+      background: {{ entry.primaryColor }} url(../assets/images/{{ entry.headerImage.first().filename }}); 
       background-position: right bottom; 
       background-size: contain; 
       background-repeat: no-repeat;
@@ -147,11 +147,11 @@
   </div>
   
   <div class="images">
-    <div class="entry__images" style="background: {% for image in entry.projectImage1 %} url({{ image.getUrl() }}) {% endfor %};  background-position:center center; background-size: cover; background-repeat: no-repeat;"></div>
+    <div class="entry__images" style="background: url(../assets/images/{{ entry.projectImage1.first().filename }});  background-position:center center; background-size: cover; background-repeat: no-repeat;"></div>
 
-    <div class="entry__images" style="background: {% for image in entry.projectImage2 %} url({{ image.getUrl() }}) {% endfor %}; background-position:center center; background-size: cover; background-repeat: no-repeat;"></div>
+    <div class="entry__images" style="background: url(../assets/images/{{ entry.projectImage2.first().filename }}); background-position:center center; background-size: cover; background-repeat: no-repeat;"></div>
 
-    <div class="entry__images" style="background: {% for image in entry.projectImage3 %} url({{ image.getUrl() }}) {% endfor %}; background-position:center center; background-size: cover; background-repeat: no-repeat;"></div>
+    <div class="entry__images" style="background: url(../assets/images/{{ entry.projectImage3.first().filename }}); background-position:center center; background-size: cover; background-repeat: no-repeat;"></div>
   </div>
 
   <div class="row button--container">
