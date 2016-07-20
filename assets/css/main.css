@@ -406,7 +406,7 @@ body, button, input, *:before, *:after {
 
 body {
   font-family: "San Francisco Display Regular", "Helvetica", "Arial", sans-serif;
-  color: #535353;
+  color: #2b2b2b;
   line-height: 1.4;
   background-color: #fff;
   -moz-text-size-adjust: none;
@@ -423,7 +423,7 @@ body {
   border: solid 1px #fff;
   padding: 1.2em 1.2em;
   margin: 0.4em 0.4em 0.5em 0;
-  font-family: "San Francisco Display Medium", "Helvetica", "Arial", sans-serif;
+  font-family: "sofia-pro", "Helvetica", "Arial", sans-serif;
   font-weight: 500;
   border-radius: 3px; }
   .btn:hover, .btn:active {
@@ -438,12 +438,12 @@ body {
   -moz-transition: background 0.2s;
   transition: background 0.2s;
   display: inline-block;
-  color: #535353;
+  color: #2b2b2b;
   background-color: transparent;
-  border: solid 1px #535353;
+  border: solid 1px #2b2b2b;
   padding: 0.5em 1em;
   margin: 0.4em 0.4em 1em 0;
-  font-family: "San Francisco Display Medium", "Helvetica", "Arial", sans-serif;
+  font-family: "sofia-pro", "Helvetica", "Arial", sans-serif;
   font-weight: 500;
   border-radius: 3px; }
   .btn--secondary:hover, .btn--secondary:active {
@@ -504,7 +504,7 @@ select {
 
 label {
   margin-bottom: 0.5em;
-  font-family: "San Francisco Display Medium", "Helvetica", "Arial", sans-serif;
+  font-family: "sofia-pro", "Helvetica", "Arial", sans-serif;
   font-weight: 500; }
   label.required::after {
     content: "*"; }
@@ -881,7 +881,7 @@ p {
   margin-bottom: 0.8em; }
 
 .h1, .wysiwyg h1 {
-  font-family: "San Francisco Display Medium", "Helvetica", "Arial", sans-serif;
+  font-family: "sofia-pro", "Helvetica", "Arial", sans-serif;
   color: #000;
   line-height: 1.2;
   font-weight: 700;
@@ -892,7 +892,7 @@ p {
       font-size: 2.441rem; } }
 
 .h2, .wysiwyg h2 {
-  font-family: "San Francisco Display Medium", "Helvetica", "Arial", sans-serif;
+  font-family: "sofia-pro", "Helvetica", "Arial", sans-serif;
   color: #000;
   line-height: 1.2;
   font-weight: 700;
@@ -903,7 +903,7 @@ p {
       font-size: 1.953rem; } }
 
 .h3, .wysiwyg h3 {
-  font-family: "San Francisco Display Medium", "Helvetica", "Arial", sans-serif;
+  font-family: "sofia-pro", "Helvetica", "Arial", sans-serif;
   color: #000;
   line-height: 1.2;
   font-weight: 700;
@@ -914,7 +914,7 @@ p {
       font-size: 1.563rem; } }
 
 .h4, .wysiwyg h4 {
-  font-family: "San Francisco Display Medium", "Helvetica", "Arial", sans-serif;
+  font-family: "sofia-pro", "Helvetica", "Arial", sans-serif;
   color: #000;
   line-height: 1.2;
   font-weight: 700;
@@ -925,7 +925,7 @@ p {
       font-size: 1.25rem; } }
 
 .h5, .wysiwyg h5 {
-  font-family: "San Francisco Display Medium", "Helvetica", "Arial", sans-serif;
+  font-family: "sofia-pro", "Helvetica", "Arial", sans-serif;
   color: #000;
   line-height: 1.2;
   font-weight: 700;
@@ -955,7 +955,7 @@ a {
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
   transition: color 0.2s;
-  color: #535353;
+  color: #2b2b2b;
   text-decoration: none; }
   a:hover, a:active, a:focus {
     color: #115b7b; }
@@ -1028,6 +1028,8 @@ hr {
   padding: .5em 0 1em 2em;
   z-index: 9999;
   font-size: 14.4px; }
+  .map__overlay h2 {
+    font-family: "sofia-pro", "Helvetica", "Arial", sans-serif; }
   @media only screen and (min-width: 288px) {
     .map__overlay {
       width: 16em; } }
@@ -1114,6 +1116,7 @@ hr {
 
 .entry__title {
   font-size: 1.728rem;
+  font-family: "sofia-pro", "Helvetica", "Arial", sans-serif;
   color: #fff;
   margin-bottom: 0.2em; }
   @media only screen and (min-width: 760px) {
@@ -1132,7 +1135,9 @@ hr {
 .entry__header {
   color: #000;
   margin: 0;
-  width: 70%; }
+  width: 70%;
+  font-family: "sofia-pro", "Helvetica", "Arial", sans-serif;
+  font-weight: 200; }
   @media only screen and (min-width: 760px) {
     .entry__header {
       margin: 0 auto;
@@ -1289,7 +1294,12 @@ hr {
   transition: all 0.3s;
   padding-right: 15%;
   margin: 0 0 1em 0;
-  padding-left: 0; }
+  padding-left: 0;
+  color: #000;
+  font-family: "sofia-pro", "Helvetica", "Arial", sans-serif;
+  font-weight: 400; }
+  .top__headline h4 {
+    font-weight: 200; }
   @media only screen and (max-width: 535px) and (min-width: 288px) {
     .top__headline {
       padding-right: 25%; } }
@@ -1303,7 +1313,7 @@ hr {
   @media only screen and (min-width: 960px) {
     .top__headline {
       margin: .5em 0 1em;
-      font-size: 1.3em; } }
+      font-size: 1.4em; } }
 
 .white {
   color: #fff !important; }
@@ -1386,6 +1396,8 @@ hr {
   padding: 0.5em 0 .5em .8em;
   margin-left: 0;
   font-size: 12.8px; }
+  .project__description h3 {
+    font-family: "sofia-pro", "Helvetica", "Arial", sans-serif; }
   @media only screen and (min-width: 375px) {
     .project__description {
       padding: 0 0 .5em 1em; } }
@@ -1543,14 +1555,15 @@ hr {
 
 .nav__item {
   display: block;
-  font-size: 1rem; }
+  font-size: 1rem;
+  color: #2b2b2b; }
   @media only screen and (min-width: 760px) {
     .nav__item {
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       transition: all 0.3s;
       display: inline;
-      font-family: "San Francisco Display Regular", "Helvetica", "Arial", sans-serif;
+      font-family: "mrs-eaves-xl-serif", serif;
       font-size: 16px;
       margin: 0 1.8em 0 0; } }
 
@@ -1669,7 +1682,8 @@ hr {
   stroke-width: 2; }
 
 .work__heading {
-  font-size: 19.2px; }
+  font-size: 19.2px;
+  font-family: "sofia-pro", "Helvetica", "Arial", sans-serif; }
   @media only screen and (min-width: 760px) {
     .work__heading {
       font-size: 22.4px; } }
