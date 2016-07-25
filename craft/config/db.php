@@ -23,6 +23,12 @@ return array(
 		'password' => 'V1s10n31',
 		'database' => 'cl50-matt-cis'
 	),
+	'matt-gibbs.com' => array(
+		'server' => 'localhost',
+		'user' => 'cl50-matt-cis',
+		'password' => 'V1s10n31',
+		'database' => 'cl50-matt-cis'
+	),
 	'dev.matt-gibbs.com' => array(
 		'server' => 'localhost',
 		'user' => 'cl50-matt-cis',

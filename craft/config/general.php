@@ -34,7 +34,11 @@ return array(
   'matt-gibbs.com' => array(
     'environmentVariables' => array(
       'basePath' => '/public_html/',
+<<<<<<< HEAD
       'baseUrl'  => 'http://matt-gibbs.com/',
+=======
+      'baseUrl'  => 'http://www.matt-gibbs.com/',
+>>>>>>> 108bf0fb699e404b4b0a739731955055cf43bec3
       'cacheDuration' => 'P1W'
     )
   ),
