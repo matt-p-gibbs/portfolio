@@ -6,6 +6,13 @@
   padding-right: 15%;
   margin: 0 0 1em 0;
   padding-left:0;
+  color: $heading-text-color;
+  font-family: $heading-font-family;
+  font-weight:400;
+
+  h4 {
+    font-weight:200;
+  }
 
   @include media-mid($small, $xsmall) {
     
@@ -24,7 +31,7 @@
 
   @include media ($large){
     margin: .5em 0 1em;
-    font-size:1.3em;
+    font-size:1.4em;
   }
 }
 
@@ -96,6 +103,10 @@
   padding:0.5em 0 .5em .8em;
   margin-left:0;
   font-size: $base-font-size*0.8;
+
+  h3 {
+    font-family: $heading-font-family;
+  }
 
   @include media(375px){
     padding:0 0 .5em 1em;

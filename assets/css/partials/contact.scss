@@ -23,6 +23,10 @@
   z-index:9999;
   font-size:$base-font-size*.9;
 
+  h2 {
+    font-family: $heading-font-family;
+  }
+
   @include media($xsmall){
     width:16em;
   }

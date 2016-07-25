@@ -24,6 +24,8 @@
 
   <!-- Fonts -->
   <!-- Typekit here -->
+  <script src="https://use.typekit.net/gpl8tdt.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
   <!-- Theme colours and icons -->
   <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
@@ -81,6 +83,7 @@
       
     </header>
 
+{% cache %}
   <div class="container">
     <div class="row">
 
@@ -99,7 +102,7 @@
     <div class="row projects">
 
       
-      <div class="item project" style="background: {{ entry.primaryColor1 }} {% for image in entry.primaryImage1 %} url({{ image.getUrl() }}) {% endfor %}; background-position: right bottom; background-size: contain; background-repeat: no-repeat;">
+      <div class="item project" style="background: {{ entry.primaryColor1 }} url(../assets/images/{{ entry.primaryImage1.first().filename }}); background-position: right bottom; background-size: contain; background-repeat: no-repeat;">
         <a href="/work">
           <div class="project__description">
             <svg height="2" width="20">
@@ -112,7 +115,7 @@
       </div>
 
 
-      <div class="item project" style="background: {{ entry.primaryColor2 }} {% for image in entry.primaryImage2 %} url({{ image.getUrl() }}) {% endfor %}; background-position: right bottom; background-size: contain; background-repeat: no-repeat;">
+      <div class="item project" style="background: {{ entry.primaryColor2 }} url(../assets/images/{{ entry.primaryImage2.first().filename }}); background-position: right bottom; background-size: contain; background-repeat: no-repeat;">
         <a href="/work">
           <div class="project__description">
             <svg height="2" width="20">
@@ -124,7 +127,7 @@
         </a>
       </div>
 
-      <div class="item project" style="background: {{ entry.primaryColor3 }} {% for image in entry.primaryImage3 %} url({{ image.getUrl() }}) {% endfor %}; background-position: right bottom; background-size: contain; background-repeat: no-repeat;">
+      <div class="item project" style="background: {{ entry.primaryColor3 }} url(../assets/images/{{ entry.primaryImage3.first().filename }}); background-position: right bottom; background-size: contain; background-repeat: no-repeat;">
         <a href="/work">
           <div class="project__description">
             <svg height="2" width="20">
@@ -136,7 +139,7 @@
         </a>
       </div>
 
-      <div class="item project" style="background: {{ entry.primaryColor4 }} {% for image in entry.primaryImage4 %} url({{ image.getUrl() }}) {% endfor %}; background-position: right bottom; background-size: contain; background-repeat: no-repeat;">
+      <div class="item project" style="background: {{ entry.primaryColor4 }} url(../assets/images/{{ entry.primaryImage4.first().filename }}); background-position: right bottom; background-size: contain; background-repeat: no-repeat;">
         <a href="/work">
           <div class="project__description">
             <svg height="2" width="20">
@@ -148,7 +151,7 @@
         </a>
       </div>
 
-      <div class="item project" style="background: {{ entry.primaryColor5 }} {% for image in entry.primaryImage5 %} url({{ image.getUrl() }}) {% endfor %}; background-position: right bottom; background-size: contain; background-repeat: no-repeat;">
+      <div class="item project" style="background: {{ entry.primaryColor5 }} url(../assets/images/{{ entry.primaryImage5.first().filename }}); background-position: right bottom; background-size: contain; background-repeat: no-repeat;">
         <a href="/work">
           <div class="project__description">
             <svg height="2" width="20">
@@ -160,7 +163,7 @@
         </a>
       </div>
 
-      <div class="item project" style="background: {{ entry.primaryColor6 }} {% for image in entry.primaryImage6 %} url({{ image.getUrl() }}) {% endfor %}; background-position: right bottom; background-size: contain; background-repeat: no-repeat;">
+      <div class="item project" style="background: {{ entry.primaryColor6 }} url(../assets/images/{{ entry.primaryImage6.first().filename }}); background-position: right bottom; background-size: contain; background-repeat: no-repeat;">
         <a href="/work">
           <div class="project__description">
             <svg height="2" width="20">
@@ -174,6 +177,8 @@
 
     </div>
   </div>
+
+{% endcache %}
 
   <div class="container">
     <div class="row footer">

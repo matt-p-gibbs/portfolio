@@ -20,7 +20,8 @@
   }
 
   &:focus {
-    color: #fff;
+    color: #000;
+    outline: 0;
   }
 }
 
@@ -44,7 +45,8 @@
   }
 
   &:focus {
-    color: $brand-color;
+    color: #fff;
+    outline: 0;
   }
 }
 
