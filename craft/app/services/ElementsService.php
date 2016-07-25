@@ -547,40 +547,23 @@ class ElementsService extends BaseApplicationComponent
 	 */
 	public function getTotalElements($criteria = null)
 	{
-		// TODO: Lots in here MySQL specific.
 		$query = $this->buildElementsQuery($criteria, $contentTable, $fieldColumns, true);
 
 		if ($query)
 		{
+			// Get the GROUP BY query part
+			$groupBy = $query->getGroup();
+
+			// Remove the order, group by, offset, limit, and any additional tables in the FROM clause
 			$query
 				->order('')
+				->group('')
 				->offset(0)
 				->limit(-1)
 				->from('elements elements');
 
-			$elementsIdColumn = 'elements.id';
-			$selectedColumns = $query->getSelect();
-
-			// Normalize with no quotes. setSelect later will properly add them back in.
-			$selectedColumns = str_replace('`', '', $selectedColumns);
-
-			// Guarantee we select an elements.id column
-			if (strpos($selectedColumns, $elementsIdColumn) === false)
-			{
-				$selectedColumns = $elementsIdColumn.', '.$selectedColumns;
-			}
-
-			// Alias elements.id as elementsId
-			$selectedColumns = str_replace($elementsIdColumn, $elementsIdColumn.' AS elementsId', $selectedColumns);
-
-			$query->setSelect($selectedColumns);
-
-			$masterQuery = craft()->db->createCommand();
-			$masterQuery->params = $query->params;
-
-			$masterQuery->from(sprintf('(%s) derivedElementsTable', $query->getText()));
-
-			$count = $masterQuery->count('derivedElementsTable.elementsId');
+			// Count the number of distinct columns based on the GROUP BY
+			$count = $query->count(sprintf('DISTINCT(%s)', $groupBy));
 
 			return $count;
 		}
@@ -2092,7 +2075,7 @@ class ElementsService extends BaseApplicationComponent
 	 *
 	 * @param string $class The element action class handle.
 	 *
-	 * @return IElementAction|null The element action, or `null`.
+	 * @return IElementType|null The element action, or `null`.
 	 */
 	public function getAction($class)
 	{
@@ -2126,9 +2109,13 @@ class ElementsService extends BaseApplicationComponent
 				}
 				else
 				{
-					$elementTypeHandle = preg_replace_callback('/^\w|_\w/', function($matches) {
-						return strtoupper($matches[0]);
-					}, $matches[1]);
+					$parts = explode('_', $matches[1]);
+
+					$parts = array_map(function ($part) {
+						return ucfirst($part);
+					}, $parts);
+
+					$elementTypeHandle = implode('_', $parts);
 				}
 
 				$token = '{'.StringHelper::randomString(9).'}';

@@ -351,8 +351,7 @@ Craft.RichTextInput = Garnish.Base.extend(
 					{
 						this.redactor.selection.restore();
 						var element   = elements[0],
-							elementTypeHandle = settings.elementType.replace(/^\w|_\w/g, function (match) { return match.toLowerCase(); }),
-							url       = element.url+'#'+elementTypeHandle+':'+element.id,
+							url       = element.url+'#'+settings.elementType.toLowerCase()+':'+element.id,
 							selection = this.redactor.selection.text(),
 							title = selection.length > 0 ? selection : element.label;
 						this.redactor.insert.node($('<a href="'+url+'">'+title+'</a>')[0]);

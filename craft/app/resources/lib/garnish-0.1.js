@@ -156,6 +156,7 @@ Base = Base.extend({
 	}
 });
 
+
 /*!
  * Garnish
  */
@@ -798,7 +799,7 @@ Garnish.Base = Base.extend({
 
 			this._eventHandlers.push({
 				type: ev[0],
-				namespace: ev[1],
+				namepsace: ev[1],
 				data: data,
 				handler: handler
 			});
@@ -1107,6 +1108,7 @@ jQuery.each(['activate','textchange','resize'], function(i, name) {
 			this.trigger(name);
 	};
 });
+
 
 /**
  * Base drag class
@@ -1617,6 +1619,7 @@ Garnish.BaseDrag = Garnish.Base.extend({
 });
 
 
+
 /**
  * Checkbox select class
  */
@@ -1665,6 +1668,7 @@ Garnish.CheckboxSelect = Garnish.Base.extend({
 		this.base();
 	}
 });
+
 
 /**
  * Context Menu
@@ -1827,6 +1831,7 @@ Garnish.ContextMenu = Garnish.Base.extend({
 	},
 	counter: 0
 });
+
 
 /**
  * Drag class
@@ -2266,6 +2271,7 @@ Garnish.Drag = Garnish.BaseDrag.extend({
 	}
 });
 
+
 /**
  * Drag-and-drop class
  *
@@ -2407,6 +2413,7 @@ Garnish.DragDrop = Garnish.Drag.extend({
 	}
 });
 
+
 /**
  * Drag-to-move clas
  *
@@ -2423,6 +2430,7 @@ Garnish.DragMove = Garnish.BaseDrag.extend({
 	}
 
 });
+
 
 /**
  * Drag-to-sort class
@@ -2949,6 +2957,7 @@ Garnish.DragSort = Garnish.Drag.extend({
 	}
 });
 
+
 /**
  * ESC key manager class
  */
@@ -3015,6 +3024,7 @@ Garnish.EscManager = Garnish.Base.extend({
 });
 
 Garnish.escManager = new Garnish.EscManager();
+
 
 /**
  * HUD
@@ -3522,8 +3532,8 @@ Garnish.HUD = Garnish.Base.extend({
 		hudClass: 'hud',
 		tipClass: 'tip',
 		bodyClass: 'body',
-		headerClass: 'hud-header',
-		footerClass: 'hud-footer',
+		headerClass: 'header',
+		footerClass: 'footer',
 		mainContainerClass: 'main-container',
 		mainClass: 'main',
 		orientations: ['bottom', 'top', 'right', 'left'],
@@ -3539,6 +3549,7 @@ Garnish.HUD = Garnish.Base.extend({
 		closeOtherHUDs: true
 	}
 });
+
 
 /**
  * Light Switch
@@ -3746,6 +3757,7 @@ Garnish.LightSwitch = Garnish.Base.extend({
 		onChange: $.noop
 	}
 });
+
 
 /**
  * Menu
@@ -3956,6 +3968,7 @@ Garnish.Menu = Garnish.Base.extend({
 	}
 });
 
+
 /**
  * Menu Button
  */
@@ -4081,6 +4094,7 @@ Garnish.MenuBtn = Garnish.Base.extend({
 		onOptionSelect: $.noop
 	}
 });
+
 
 /**
  * Mixed input
@@ -4512,6 +4526,7 @@ var TextElement = Garnish.Base.extend({
 	padding: 20
 });
 
+
 /**
  * Modal
  */
@@ -4879,6 +4894,7 @@ Garnish.Modal = Garnish.Base.extend({
 	visibleModal: null
 });
 
+
 /**
  * Nice Text
  */
@@ -5230,6 +5246,7 @@ Garnish.NiceText = Garnish.Base.extend({
 	}
 });
 
+
 /**
  * Pill
  */
@@ -5369,6 +5386,7 @@ Garnish.Pill = Garnish.Base.extend({
 		this.base();
 	}
 });
+
 
 /**
  * Select
@@ -6453,6 +6471,7 @@ Garnish.Select = Garnish.Base.extend({
 	}
 });
 
+
 /**
  * Select Menu
  */
@@ -6539,5 +6558,6 @@ Garnish.SelectMenu = Garnish.Menu.extend({
 		ulClass: 'menu select'
 	}
 });
+
 
 })(jQuery);

@@ -415,7 +415,7 @@ class S3AssetSourceType extends BaseAssetSourceType
 			'bucket'     => array(AttributeType::String, 'required' => true),
 			'location'   => array(AttributeType::String, 'required' => true),
 			'publicURLs' => array(AttributeType::Bool,   'default' => true),
-			'urlPrefix'  => array(AttributeType::String),
+			'urlPrefix'  => array(AttributeType::String, 'required' => true),
 			'subfolder'  => array(AttributeType::String, 'default' => ''),
 			'expires'    => array(AttributeType::String, 'default' => ''),
 		);

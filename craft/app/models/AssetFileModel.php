@@ -253,18 +253,6 @@ class AssetFileModel extends BaseElementModel
 		{
 			return false;
 		}
-		
-		if (is_array($transform))
-		{
-			if (isset($transform['width']))
-			{
-				$transform['width'] = round($transform['width']);
-			}
-			if (isset($transform['height']))
-			{
-				$transform['height'] = round($transform['height']);
-			}
-		}
 
 		if ($transform === null && isset($this->_transform))
 		{

@@ -280,21 +280,16 @@ abstract class BaseRecord extends \CActiveRecord
 			$columns[$name] = $config;
 		}
 
-		$addIdColumn = true;
-		$pks = $this->primaryKey();
+		$pk = $this->primaryKey();
 
-		if (!is_array($pks))
+		if (isset($columns[$pk]))
 		{
-			$pks = array($pks);
+			$columns[$pk]['primaryKey'] = true;
+			$addIdColumn = false;
 		}
-
-		foreach ($pks as $pk)
+		else
 		{
-			if (isset($columns[$pk]))
-			{
-				$columns[$pk]['primaryKey'] = true;
-				$addIdColumn = false;
-			}
+			$addIdColumn = true;
 		}
 
 		// Create the table

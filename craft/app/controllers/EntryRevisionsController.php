@@ -54,16 +54,6 @@ class EntryRevisionsController extends BaseEntriesController
 
 		$this->_setDraftAttributesFromPost($draft);
 
-		$fieldsLocation = craft()->request->getParam('fieldsLocation', 'fields');
-		$draft->setContentFromPost($fieldsLocation);
-
-		$entryType = $draft->getType();
-
-		if (!$entryType->hasTitleField)
-		{
-			$draft->getContent()->title = craft()->templates->renderObjectTemplate($entryType->titleFormat, $draft);
-		}
-
 		if (!$draft->id)
 		{
 			// Attempt to create a new entry
@@ -87,6 +77,9 @@ class EntryRevisionsController extends BaseEntriesController
 				$draft->addErrors($content->getErrors());
 			}
 		}
+
+		$fieldsLocation = craft()->request->getParam('fieldsLocation', 'fields');
+		$draft->setContentFromPost($fieldsLocation);
 
 		if ($draft->id && craft()->entryRevisions->saveDraft($draft))
 		{

@@ -134,7 +134,6 @@ $configArray = array(
 		'app.etc.errors.EtException',
 		'app.etc.errors.Exception',
 		'app.etc.errors.HttpException',
-		'app.etc.errors.InvalidSourceException',
 		'app.etc.errors.InvalidSubpathException',
 		'app.etc.errors.InvlaidLicenseKeyException',
 		'app.etc.errors.TemplateLoaderException',
