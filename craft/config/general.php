@@ -17,7 +17,7 @@ return array(
   'localhost' => array(
     'environmentVariables' => array(
       'basePath' => '/Users/Matt/Developer/web/portfolio/',
-      'baseUrl'  => 'http://inktraps-imac.local:5757/',
+      'baseUrl'  => 'http://the-beast.local:5757/',
       'devMode' => true,
       'testToEmailAddress'  => 'me@matt-gibbs.com'
     )

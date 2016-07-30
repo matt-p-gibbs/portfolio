@@ -1,6 +1,18 @@
 // Work
 // --------------------------------------------------
 
+//Scroll Animation 
+.invisible {
+    @include transition(opacity, 0.5s, ease);
+    opacity: 0.0;
+}
+
+.visible {
+    @include transition(opacity, 0.5s, ease);
+    opacity: 1.0;
+}
+//End Anim
+
 .work__page{
   @include media($small) {
     @include flex-direction(column);
@@ -44,11 +56,23 @@
     @include flex (1 0 22em !important);
     max-width: 100% !important;
     height:22em !important;
+
+    &:hover{
+      z-index: 1000;
+      @include transform(scale(1.02)!important);
+    };
+
   }
 
   @include media($large) {
     @include flex (1 0 28em !important);
     height:28em !important;
+  }
+
+  @include media(1300px){
+    &:hover{
+      @include transform(scale(1.05)!important);
+    };
   }
 
 }

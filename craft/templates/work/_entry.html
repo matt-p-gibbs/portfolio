@@ -27,6 +27,8 @@
       background-position: right bottom; 
       background-size: contain; 
       background-repeat: no-repeat;
+      animation-name: fadeInDown;
+      animation-duration: 2s;
     }
 
     @media only screen and (min-width: 620px) {
@@ -94,9 +96,9 @@
         <div class="item navigation">
             <nav class="header__nav" id="nav">
               <ul class="nav--primary" role="navigation">
-                <li class="nav__item active--invert"><a class="nav__link white" href="/work">Work</a></li>
-                <li class="nav__item"><a class="nav__link white" href="/about">About</a></li>
-                <li class="nav__item"><a class="nav__link white" href="/contact">Contact</a></li>
+                <li class="nav__item active--invert"><a class="nav__link white" href="/work">work</a></li>
+                <li class="nav__item"><a class="nav__link white" href="/about">about</a></li>
+                <li class="nav__item"><a class="nav__link white" href="/contact">contact</a></li>
               </ul>
             </nav>
           </div>
@@ -149,7 +151,7 @@
   </div>
   
   <div class="images">
-    <div class="entry__images" style="background: url(../assets/images/{{ entry.projectImage1.first().filename }});  background-position:center center; background-size: cover; background-repeat: no-repeat;"></div>
+    <div class="entry__images"  style="background: url(../assets/images/{{ entry.projectImage1.first().filename }});  background-position:center center; background-size: cover; background-repeat: no-repeat;"></div>
 
     <div class="entry__images" style="background: url(../assets/images/{{ entry.projectImage2.first().filename }}); background-position:center center; background-size: cover; background-repeat: no-repeat;"></div>
 

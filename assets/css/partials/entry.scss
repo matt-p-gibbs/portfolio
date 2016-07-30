@@ -164,6 +164,8 @@
   width:100%;
   height:29em;
   z-index:11;
+  animation-name: fadeIn;
+  animation-duration: 4s;
 
   @include media(375px){
     height:31em;

@@ -80,18 +80,29 @@
     @include flex-basis(50%);
     max-width: 50%;
     height:18em;
+
+    &:hover{
+      z-index: 1000;
+      @include transform(scale(1.05));
+    };
+
   }
 
   @include media($large) {
-    height:14em;
-    @include flex-basis(33.3333%);
-    max-width: 33.3333%;
+    height:25em;
+    @include flex-basis(50%);
+    max-width: 50%;
+
   }
 
   @include media($xlarge) {
-    height:17em;
+    height:19em;
     @include flex-basis(33.3333%);
     max-width: 33.3333%;
+    &:hover{
+      z-index: 1000;
+      @include transform(scale(1.1));
+    };
   }
 	
 }
@@ -143,5 +154,12 @@
   @include media($medium){
     stroke:rgb(0,0,0);
   }
+}
+
+.gif {
+  background-image: url("../images/404.gif");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 

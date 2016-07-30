@@ -17,6 +17,8 @@
   &:hover, &:active {
     background-color: #fff;
     color: #000;
+    animation-name: shake;
+    animation-duration: 1s;
   }
 
   &:focus {
@@ -33,7 +35,7 @@
   background-color:transparent;
   border: solid 1px $body-text-color;
   padding: 0.5em 1em;
-  margin: 0.4em 0.4em 1em 0;
+  margin: 1em 0.4em 1em 0;
   font-family: $heading-font-family;
   font-weight: 500;
   border-radius: $base-border-radius;
@@ -42,6 +44,8 @@
     background-color: $brand-color;
     color: #fff;
     border-color:#fff;
+    animation-name: shake;
+    animation-duration: 1s;
   }
 
   &:focus {
