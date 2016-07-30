@@ -1,3 +1,7 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^matt-gibbs.com [NC]
+RewriteRule ^(.*)$ http://www.matt-gibbs.com/$1 [L,R=301]
+
 <IfModule mod_rewrite.c>
 	RewriteEngine On
 
