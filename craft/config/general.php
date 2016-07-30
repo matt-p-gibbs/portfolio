@@ -16,7 +16,7 @@ return array(
 
   'localhost' => array(
     'environmentVariables' => array(
-      'basePath' => '/Users/Matt/Developer/web/portfolio/',
+      'basePath' => '/Users/matt_gibbs/Developer/portfolio/',
       'baseUrl'  => 'http://the-beast.local:5757/',
       'devMode' => true,
       'testToEmailAddress'  => 'me@matt-gibbs.com'
