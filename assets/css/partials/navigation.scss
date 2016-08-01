@@ -3,6 +3,8 @@
 
 .header {
   @include transition(all 0.3s);
+  animation-name: fallDown;
+  animation-duration:1s;
   
   margin-top:2em;
   margin-bottom:0;

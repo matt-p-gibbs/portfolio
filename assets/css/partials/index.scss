@@ -9,6 +9,9 @@
   color: $heading-text-color;
   font-family: $heading-font-family;
   font-weight:400;
+  letter-spacing: -.3px;
+  animation-name: fadeInUp;
+  animation-duration:1s;
 
   h4 {
     font-weight:200;
@@ -53,6 +56,8 @@
 	margin:0;
   cursor:pointer;
 	max-width: 100%;
+  animation-name: fadeInUp;
+  animation-duration:1s;
 
   @include media(375px){
     height:13em;
@@ -138,11 +143,11 @@
     color:#000;
     opacity:0;
     overflow: hidden;
+    width:12em;
+    padding:.5em 0 .5em 2em;
 
     .desc--visible & {
       opacity:1;
-      width:12em;
-      padding:.5em 0 .5em 2em;
     }
   }
 }

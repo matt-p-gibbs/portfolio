@@ -5,6 +5,8 @@
   border-top: $base-border;
   padding-top:.25em;
   text-align:center;
+  animation-name: fadeInUp;
+  animation-duration: 1s;
 
   p {
     margin-bottom: 0;
