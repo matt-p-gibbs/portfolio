@@ -33,7 +33,7 @@ return array(
 
   'dev.matt-gibbs.com' => array(
     'environmentVariables' => array(
-      'basePath' => '/public_html/in-development-site/',
+      'basePath' => '/public_html/dev/',
       'baseUrl'  => 'http://dev.matt-gibbs.com'
     )
   )

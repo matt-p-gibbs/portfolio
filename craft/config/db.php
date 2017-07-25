@@ -19,9 +19,9 @@ return array(
 	),
 	'www.matt-gibbs.com' => array(
 		'server' => 'localhost',
-		'user' => 'cl50-matt-cis',
+		'user' => 'mattdwip_portfolio',
 		'password' => 'V1s10n31',
-		'database' => 'cl50-matt-cis'
+		'database' => 'mattdwip_portfolio'
 	),
 	'dev.matt-gibbs.com' => array(
 		'server' => 'localhost',
