@@ -49,27 +49,27 @@
   <meta name="application-name" content=""/>
 </head>
 <body class="gri-test">
-  
+
   <!-- Browser upgrade -->
   <!--[if lte IE 10]>
     <p class="browserupgrade">You are using an outdated browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
     <header class="container container--navigation" role="banner">
       <div  class="row header">
-        
+
         <div class="item header__brand">
           <div class="nav__toggle">
-                <img class="nav__button" src="assets/images/nav.png">  
+                <img class="nav__button" src="assets/images/nav.png">
           </div>
 
           <div class="header__logo">
               <a href="/" class="logo">
                 <img class="site-logo" src="assets/images/logo.png">
-              </a>    
+              </a>
           </div>
         </div>
-      
-      
+
+
         <div class="item navigation">
             <nav class="header__nav" id="nav">
               <ul class="nav--primary" role="navigation">
@@ -80,7 +80,7 @@
             </nav>
           </div>
       </div>
-      
+
     </header>
 
   <div class="container">
@@ -91,7 +91,7 @@
       </div>
     </div>
   </div>
-      
+
   <div class="container">
     <div class="row work__page">
 
@@ -107,7 +107,7 @@
               </svg>
               <h3 class="work__heading"> {{ entry.mainHeading }} </h3>
               <p class="work__summary">{{ entry.subHeading }}</p>
-              
+
               {% if entry.workList %}
 
                 <ul class="work__list">
@@ -120,11 +120,11 @@
 
               {% endif %}
 
-              <a href="{{ siteUrl }}work/{{ entry.slug }}""><button class="btn">View more...</button></a>
+              <a href="{{ entry.url }}"><button class="btn">View more...</button></a>
             </div>
 
           </div>
-      
+
         {% endfor %}
 
       {% endcache %}

@@ -15,13 +15,13 @@ return array(
   ),
 
   'localhost' => array(
-    'environmentVariables' => array(
-      'basePath' => '/Users/Matt/Developer/web/portfolio/',
-      'baseUrl'  => 'http://inktraps-imac.local:5757/',
-      'devMode' => true,
-      'testToEmailAddress'  => 'me@matt-gibbs.com'
-    )
-  ),
+  'environmentVariables' => array(
+    'sitePath' => '/Users/Matt/Developer/portfolio/',
+    'baseUrl'  => 'http://localhost:8888/portfolio/',
+    'devMode' => true,
+    'testToEmailAddress'  => 'me@matt-gibbs.com'
+  )
+),
 
   'www.matt-gibbs.com' => array(
     'environmentVariables' => array(

@@ -13,9 +13,10 @@ return array(
 	),
 	'localhost' => array(
 		'server' => 'localhost',
-		'user' => 'matt',
-		'password' => 'V1s10n31',
-		'database' => 'cl50-matt-cis'
+		'user' => 'root',
+		'password' => 'root',
+		'database' => 'portfolio',
+    'port' => '8889'
 	),
 	'www.matt-gibbs.com' => array(
 		'server' => 'localhost',
