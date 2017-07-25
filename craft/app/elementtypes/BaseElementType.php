@@ -310,7 +310,7 @@ abstract class BaseElementType extends BaseComponentType implements IElementType
 		{
 			case 'link':
 			{
-				$url = $element->getUrl();
+				$url = HtmlHelper::encode($element->getUrl());
 
 				if ($url)
 				{
@@ -320,11 +320,13 @@ abstract class BaseElementType extends BaseComponentType implements IElementType
 				{
 					return '';
 				}
+
+				break;
 			}
 
 			case 'uri':
 			{
-				$url = $element->getUrl();
+				$url = HtmlHelper::encode($element->getUrl());
 
 				if ($url)
 				{
@@ -692,7 +694,17 @@ abstract class BaseElementType extends BaseComponentType implements IElementType
 	 */
 	protected function getTableAttributesForSource($sourceKey)
 	{
-		return craft()->elementIndexes->getTableAttributes($this->getClassHandle(), $sourceKey);
+		$elementType = $this->getClassHandle();
+
+		// Give plugins a chance to customize them
+		$pluginAttributes = craft()->plugins->callFirst('getTableAttributesForSource', array($elementType, $sourceKey), true);
+
+		if ($pluginAttributes !== null)
+		{
+			return $pluginAttributes;
+		}
+
+		return craft()->elementIndexes->getTableAttributes($elementType, $sourceKey);
 	}
 
 	/**
